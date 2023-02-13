@@ -1,36 +1,86 @@
 
 <!DOCTYPE html>
-<html lang='en' class=''>
+<html>
 
 <head>
 
   <meta charset='UTF-8'>
   <title>CodePen Demo</title>
 
-  <meta name="robots" content="noindex">
-
-  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
-  <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
-  <link rel="canonical" href="https://codepen.io/ahmadnasr/pen/KKpvNGY">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  
-<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
-<link rel="stylesheet" href="demo_css1.css">
-
   
 <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-6bce046e7128ddf9391ccf7acbecbf7ce0cbd7b6defbeb2e217a867f51485d25.js"></script>
 <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
 <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
-</head>
+
+   <script>
+    function loadStyle(e) {
+        return new Promise(function(o, l) {
+            let n = document.createElement("link");
+            n.href = e, n.rel = "canonical", n.onload = () => o(n), n.onerror = () => l(Error(`Style load error for ${e}`)), document.head.append(n)
+        })
+    }
+    window.onload = function() {
+        loadStyle("https://codepen.io/ahmadnasr/pen/KKpvNGY");        
+    };
+</script>
+  
+   <script>
+    function loadStyle(e) {
+        return new Promise(function(o, l) {
+            let n = document.createElement("link");
+            n.href = e, n.rel = "mask-icon", n.onload = () => o(n), n.onerror = () => l(Error(`Style load error for ${e}`)), document.head.append(n)
+        })
+    }
+    window.onload = function() {
+        loadStyle("https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg");        
+    };
+</script>
+  
+   <script>
+    function loadStyle(e) {
+        return new Promise(function(o, l) {
+            let n = document.createElement("link");
+            n.href = e, n.rel = "shortcut icon", n.onload = () => o(n), n.onerror = () => l(Error(`Style load error for ${e}`)), document.head.append(n)
+        })
+    }
+    window.onload = function() {
+        loadStyle("https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico");        
+    };
+</script>
+  
+  <script>
+    function loadStyle(e) {
+        return new Promise(function(o, l) {
+            let n = document.createElement("link");
+            n.href = e, n.rel = "preconnect", n.onload = () => o(n), n.onerror = () => l(Error(`Style load error for ${e}`)), document.head.append(n)
+        })
+    }
+    window.onload = function() {
+        loadStyle("https://fonts.googleapis.com");
+        loadStyle("https://fonts.gstatic.com");
+        
+    };
+</script>
+  <script>
+    function loadStyle(e) {
+        return new Promise(function(o, l) {
+            let n = document.createElement("link");
+            n.href = e, n.rel = "stylesheet", n.onload = () => o(n), n.onerror = () => l(Error(`Style load error for ${e}`)), document.head.append(n)
+        })
+    }
+    window.onload = function() {
+        loadStyle("https://rsms.me/inter/inter.css");
+        loadStyle("https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css");
+        loadStyle("demo_css1.css");
+        loadStyle("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    };
+</script>
+  
+  
+  </head>
 
 <body>
+  
   a1<br>
 <section class="c-section">
   <h2 class="c-section__title"><span>Our Services</span></h2>
