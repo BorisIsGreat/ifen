@@ -7,14 +7,9 @@
 
   <meta name="robots" content="noindex">
 
-  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
-  <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
-  <link rel="canonical" href="https://codepen.io/z-/pen/zYxdRQy">
 
   
   
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;display=swap">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
   <style id="INLINE_PEN_STYLESHEET_ID">
     body {
@@ -306,7 +301,55 @@ body .footer .content > div .image {
         loadStyle("https://borisisgreat.github.io/ifen/css_goey_footer.css")
     };
 </script>
-  
+  <script>
+    function loadStyle(e) {
+        return new Promise(function(o, l) {
+            let n = document.createElement("link");
+            n.href = e, n.rel = "shortcut icon", n.onload = () => o(n), n.onerror = () => l(Error(`Style load error for ${e}`)), document.head.append(n)
+        })
+    }
+    window.onload = function() {
+        loadStyle("https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico")
+    };
+</script>
+
+
+<script>
+    function loadStyle(e) {
+        return new Promise(function(o, l) {
+            let n = document.createElement("link");
+            n.href = e, n.rel = "mask-icon", n.onload = () => o(n), n.onerror = () => l(Error(`Style load error for ${e}`)), document.head.append(n)
+        })
+    }
+    window.onload = function() {
+        loadStyle("https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg")
+    };
+</script>
+
+<script>
+    function loadStyle(e) {
+        return new Promise(function(o, l) {
+            let n = document.createElement("link");
+            n.href = e, n.rel = "canonical", n.onload = () => o(n), n.onerror = () => l(Error(`Style load error for ${e}`)), document.head.append(n)
+        })
+    }
+    window.onload = function() {
+        loadStyle("https://codepen.io/z-/pen/zYxdRQy")
+    };
+</script>
+
+<script>
+    function loadStyle(e) {
+        return new Promise(function(o, l) {
+            let n = document.createElement("link");
+            n.href = e, n.rel = "stylesheet", n.onload = () => o(n), n.onerror = () => l(Error(`Style load error for ${e}`)), document.head.append(n)
+        })
+    }
+    window.onload = function() {
+        loadStyle("https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;display=swap")
+        loadStyle("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
+    };
+</script>
 </body>
 
 </html>
