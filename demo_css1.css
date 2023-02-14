@@ -109,7 +109,7 @@ ul li:before {
   }
 }
 .c-section__title:after {
-  content: "";
+  content: "fgndfgndfgndfgndfgndfgndfgndfgndfgnfdgndfnfngfnfgdndfgdfgndfgndfgndfgndfgndfgn";
   display: block;
   background-size: calc(var(--s5) * 3) calc(var(--s5) * 3);
   width: calc(var(--s5) * 3);
