@@ -88,8 +88,9 @@ ul li:before {
   margin: 0 calc(var(--s3) * -1);
   color: #fff;
   font-size: var(--s4);
-  font-weight: 900;
+  font-weight:400;
   text-align: center;
+  color:black;
 }
 @media (min-width: 40.625em) {
   .c-section__title {
