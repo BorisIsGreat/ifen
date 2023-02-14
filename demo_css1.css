@@ -109,7 +109,7 @@ ul li:before {
   }
 }
 .c-section__title:after {
-  content: "fgndfgndfgndfgndfgndfgndfgndfgndfgnfdgndfnfngfnfgdndfgdfgndfgndfgndfgndfgndfgn";
+  content: "";
   display: block;
   background-size: calc(var(--s5) * 3) calc(var(--s5) * 3);
   width: calc(var(--s5) * 3);
@@ -120,7 +120,6 @@ ul li:before {
   margin-right: auto;
   transform: translateY(11rem);
   z-index: 1;
-  background-color: red;
 }
 @media (min-width: 40.625em) {
   .c-section__title:after {
