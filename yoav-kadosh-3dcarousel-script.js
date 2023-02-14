@@ -3,7 +3,7 @@ import ReactDOM from 'https://cdn.skypack.dev/react-dom';
 import { TiChevronLeftOutline, TiChevronRightOutline } from 'https://cdn.skypack.dev/react-icons/ti';
 
 const CARDS = 10;
-const MAX_VISIBILITY = 3;
+const MAX_VISIBILITY = 1;
 
 const Card = ({ title, content }) => /*#__PURE__*/
 React.createElement("div", { className: "card" }, /*#__PURE__*/
@@ -41,7 +41,8 @@ const App = () => /*#__PURE__*/
 React.createElement("div", { className: "app" }, /*#__PURE__*/
 React.createElement(Carousel, null,
 [...new Array(CARDS)].map((_, i) => /*#__PURE__*/
-React.createElement(Card, { title: 'Card ' + (i + 1), content: "Boris Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." }))));
+React.createElement(Card, { title: 'Willkommen', content: "Boris willkomm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." }))));
+React.createElement(Card, { title: 'Informationen', content: "Boris infio Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." }))));
 
 
 
