@@ -29,6 +29,15 @@ body {
   width: 0;
   transform: translate(-20px, -20px);
 }
+
+/*
+* container
+*/
+.animation-container {
+    height: 400px; /* Change this to the desired height */
+    overflow: auto; /* Add this to enable scrolling */
+  }
+
 /*
 * background
 */
