@@ -90,7 +90,7 @@ ul li:before {
   font-size: var(--s4);
   font-weight:400;
   text-align: center;
-  color:black;
+  color:: #000000;
 }
 @media (min-width: 40.625em) {
   .c-section__title {
