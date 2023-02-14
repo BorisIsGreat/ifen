@@ -37,12 +37,22 @@ const Carousel = ({ children }) => {
 
 };
 
-const App = () => /*#__PURE__*/
-React.createElement("div", { className: "app" }, /*#__PURE__*/
-React.createElement(Carousel, null,
-[...new Array(CARDS)].map((_, i) => /*#__PURE__*/
-React.createElement(Card, { title: 'Card ' + (i + 1), content: "content 1.", text: "Boris" + (i + 1) }))));
-
+const App = () => (
+  <div className="app">
+    <Carousel>
+      <Card
+        title="Card 1"
+        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        text="This is the text for card 1."
+      />
+      <Card
+        title="Card 2"
+        content="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        text="This is the text for card 2."
+      />
+    </Carousel>
+  </div>
+);
 
 ReactDOM.render( /*#__PURE__*/
 React.createElement(App, null),
