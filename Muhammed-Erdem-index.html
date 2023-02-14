@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" >
+<head>
+  
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
+	<link rel="stylesheet" href="./style.css">
 
+</head>
 <body>
 	
-	 <script>
-    function loadStyle(e) {
-        return new Promise(function(o, l) {
-            let n = document.createElement("link");
-            n.href = e, n.rel = "stylesheet", n.onload = () => o(n), n.onerror = () => l(Error(`Style load error for ${e}`)), document.head.append(n)
-        })
-    }
-    window.onload = function() {
-        loadStyle("https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css");
-        loadStyle("https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css");
-        loadStyle("https://borisisgreat.github.io/ifen/Muhammed-Erdemstyle.css");
-    };
-</script>
+	
 	
 <!-- partial:index.partial.html -->
 <div class="wrapper">
