@@ -30,7 +30,13 @@ Accessibility
 	width: auto;
 	z-index: 100000; /* Above WP toolbar */
 } 
-
+.footer {
+        background-image: url(https://borisisgreat.github.io/ifen/goey_footer.html);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+        width: 100%;
+    }
 /*--------------------------------------------------------------
 General styling
 --------------------------------------------------------------*/
