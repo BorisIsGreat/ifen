@@ -1,0 +1,24 @@
+    /* Override conflicting styles */
+    #content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .card-item {
+        margin: 0 10px;
+        width: 30%;
+    }
+
+    /* Add additional styles */
+    .caption-title {
+        margin-bottom: 10px;
+    }
+    
+    .location {
+        margin-bottom: 10px;
+    }
+    
+    .caption p {
+        margin-bottom: 0;
+    }
