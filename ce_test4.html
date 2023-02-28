@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Interactive Checkbox Example</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#checkbox').on('change', function(){
+				var value = $(this).prop('checked');
+				$.ajax({
+					url: 'checkbox.php',
+					type: 'post',
+					data: {checkbox: value},
+					success: function(response){
+						console.log(response);
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<label for="checkbox">Check this box:</label>
+	<input type="checkbox" id="checkbox" name="checkbox" value="1">
+	<?php
+		if(isset($_POST['checkbox'])) {
+			if($_POST['checkbox'] == true){
+				echo "The checkbox is checked.";
+			} else {
+				echo "The checkbox is not checked.";
+			}
+		} else {
+			echo "The checkbox is not checked.";
+		}
+	?>
+</body>
+</html>
