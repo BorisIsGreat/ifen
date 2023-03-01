@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Interactive Checkboxes Example</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.checkbox').on('change', function(){
+				var values = {};
+				$('.checkbox:checked').each(function(){
+					var name = $(this).attr('name');
+					var value = $(this).val();
+					values[name] = value;
+				});
+				$.ajax({
+					url: 'checkbox.php',
+					type: 'post',
+					data: {checkbox: values},
+					success: function(response){
+						console.log(response);
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<label for="checkbox1a">Checkbox 1:</label>
+	<input type="checkbox" id="checkbox1a" class="checkbox" name="checkbox1[]" value="1a">
+	<input type="checkbox" id="checkbox1b" class="checkbox" name="checkbox1[]" value="1b">
+	<input type="checkbox" id="checkbox1c" class="checkbox" name="checkbox1[]" value="1c">
+	<br>
+	<label for="checkbox2a">Checkbox 2:</label>
+	<input type="checkbox" id="checkbox2a" class="checkbox" name="checkbox2[]" value="2a">
+	<input type="checkbox" id="checkbox2b" class="checkbox" name="checkbox2[]" value="2b">
+	<input type="checkbox" id="checkbox2c" class="checkbox" name="checkbox2[]" value="2c">
+	<br>
+	<label for="checkbox3a">Checkbox 3:</label>
+	<input type="checkbox" id="checkbox3a" class="checkbox" name="checkbox3[]" value="3a">
+	<input type="checkbox" id="checkbox3b" class="checkbox" name="checkbox3[]" value="3b">
+	<input type="checkbox" id="checkbox3c" class="checkbox" name="checkbox3[]" value="3c">
+	<br>
+	<label for="checkbox4a">Checkbox 4:</label>
+	<input type="checkbox" id="checkbox4a" class="checkbox" name="checkbox4[]" value="4a">
+	<input type="checkbox" id="checkbox4b" class="checkbox" name="checkbox4[]" value="4b">
+	<input type="checkbox" id="checkbox4c" class="checkbox" name="checkbox4[]" value="4c">
+	<?php
+		if(isset($_POST['checkbox'])) {
+			$values = $_POST['checkbox'];
+			foreach($values as $name => $value) {
+				if(in_array('a', $value)){
+					echo "Checkbox " . substr($name, -1) . " option A is selected. ";
+				}
+				if(in_array('b', $value)){
+					echo "Checkbox " . substr($name, -1) . " option B is selected. ";
+				}
+				if(in_array('c', $value)){
+					echo "Checkbox " . substr($name, -1) . " option C is selected. ";
+				}
+				if(empty($value)){
+					echo "Checkbox " . substr($name, -1) . " is not checked. ";
+				}
+			}
+			if(empty($values)){
+				echo "Please select an option.";
+			}
+		} else {
