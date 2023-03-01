@@ -7,44 +7,42 @@
 <body>
     <?php
 
-        // Include the Google API PHP client library
         require_once __DIR__ . '/vendor/autoload.php';
 
-        // Replace with your Google Sheets API credentials
+
         'AIzaSyC5tYKYQcPfridnR-OX00EhVNyP3kPIVuE';
 
-        // Replace with the ID of your Google Sheet
+
         $spreadsheetId = '1ufA3qXALuBWyHFqe3c9KCsnIUFq-Nw-cxne3F6q4ixk/edit#gid=0';
 
-        // Replace with the range of cells you want to update
+
         $range = 'Database!B1:B4';
 
-        // Replace with the data you want to write to the Google Sheet
+
         $data = [
             ['True'],
             ['False']
         ];
 
-        // Create a new instance of the Google Sheets API client
+   
         $client = new Google_Client();
         $client->useApplicationDefaultCredentials();
         $client->addScope(Google_Service_Sheets::SPREADSHEETS);
 
-        // Create a new instance of the Google Sheets API service
+
         $service = new Google_Service_Sheets($client);
 
-        // Create a new Google Sheets value range object
+
         $valueRange = new Google_Service_Sheets_ValueRange([
             'range' => $range,
             'values' => $data
         ]);
 
-        // Write the data to the Google Sheet
         $result = $service->spreadsheets_values->update($spreadsheetId, $range, $valueRange, [
             'valueInputOption' => 'RAW'
         ]);
 
-        // Print the result
+
         echo 'Data written to Google Sheet';
 
 </body>
