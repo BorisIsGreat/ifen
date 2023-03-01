@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Write to Google Sheet</title>
+</head>
+<body>
+    <?php
+
+        require_once __DIR__ . '/vendor/autoload.php';
+
+        putenv('GOOGLE_APPLICATION_CREDENTIALS=AIzaSyC5tYKYQcPfridnR-OX00EhVNyP3kPIVuE');
+
+        $spreadsheetId = '1ufA3qXALuBWyHFqe3c9KCsnIUFq-Nw-cxne3F6q4ixk';
+
+        $range = 'Database!B1:B4';
+
+        $data = [
+            ['True'],
+            ['False'],
+            ['True'],
+            ['False']
+        ];
+
+        $client = new Google_Client();
+        $client->useApplicationDefaultCredentials();
+        $client->addScope(Google_Service_Sheets::SPREADSHEETS);
+
+        $service = new Google_Service_Sheets($client);
+
+        $valueRange = new Google_Service_Sheets_ValueRange([
+            'range' => $range,
+            'values' => $data
+        ]);
+
+        $result = $service->spreadsheets_values->update($spreadsheetId, $range, $valueRange, [
+            'valueInputOption' => 'RAW'
+        ]);
+
+        echo 'Data written to Google Sheet';
+    ?>
+</body>
+</html>
