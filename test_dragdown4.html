@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Interactive Checkboxes Example</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.checkbox').on('change', function(){
+				var values = {};
+				$('.checkbox').each(function(){
+					var name = $(this).attr('name');
+					var value = $(this).val();
+					values[name] = value;
+				});
+				$.ajax({
+					url: 'checkbox.php',
+					type: 'post',
+					data: {checkbox: values},
+					success: function(response){
+						console.log(response);
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<label for="checkbox1">Cellule Events:</label>
+	<select id="checkbox1" class="checkbox" name="checkbox1">
+		<option value="1a">Not Started</option>
+		<option value="1b">In Progress</option>
+		<option value="1c">Completed</option>
+	</select>
+	<br>
+	<label for="checkbox2">Cellule Communication:</label>
+	<select id="checkbox2" class="checkbox" name="checkbox2">
+		<option value="2a">Not Started</option>
+		<option value="2b">In Progress</option>
+		<option value="2c">Completed</option>
+	</select>
+	<br>
+	<label for="checkbox3">Cellule Moodle:</label>
+	<select id="checkbox3" class="checkbox" name="checkbox3">
+		<option value="3a">Not Started</option>
+		<option value="3b">In Progress</option>
+		<option value="3c">Completed</option>
+	</select>
+	<br>
+	<label for="checkbox4">Cellule Studio:</label>
+	<select id="checkbox4" class="checkbox" name="checkbox4">
+		<option value="4a">Not Started</option>
+		<option value="4b">In Progress</option>
+		<option value="4c">Completed</option>
+	</select>
+	<?php
+		if(isset($_POST['checkbox'])) {
+			$values = $_POST['checkbox'];
+			foreach($values as $name => $value) {
+				if(!empty($value)){
+					echo "Checkbox " . substr($name, -1) . " option " . substr($value, -1) . " is selected. ";
+				} else {
+					echo "Checkbox " . substr($name, -1) . " is not checked. ";
+				}
+			}
+			if(empty($values)){
+				echo "Please select an option.";
+			}
+		} else {
+			echo "Please select an option.";
+		}
+	?>
+</body>
+</html>
