@@ -1,0 +1,24 @@
+<?php
+require_once 'PHPExcel.php';
+
+// Create a new PHPExcel object
+$objPHPExcel = new PHPExcel();
+
+// Set some properties for the Excel file
+$objPHPExcel->getProperties()->setTitle("My Excel File");
+
+// Add some data to the first worksheet
+$objPHPExcel->setActiveSheetIndex(0)
+            ->setCellValue('A1', 'Name')
+            ->setCellValue('B1', 'Age')
+            ->setCellValue('C1', 'Email')
+            ->setCellValue('A2', 'John Doe')
+            ->setCellValue('B2', '25')
+            ->setCellValue('C2', 'john.doe@example.com');
+
+// Save the Excel file to disk
+$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+$objWriter->save('my_excel_file.xlsx');
+
+echo "Excel file created successfully!";
+?>
