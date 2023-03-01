@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Interactive Checkboxes Example</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.checkbox').on('change', function(){
+				var values = {};
+				$('.checkbox').each(function(){
+					var name = $(this).attr('name');
+					var value = $(this).val();
+					values[name] = value;
+				});
+				$.ajax({
+					url: 'checkbox.php',
+					type: 'post',
+					data: {checkbox: values},
+					success: function(response){
+						console.log(response);
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<label for="checkbox1">Checkbox 1:</label>
+	<select id="checkbox1" class="checkbox" name="checkbox1">
+		<option value="1a">Option 1A</option>
+		<option value="1b">Option 1B</option>
+		<option value="1c">Option 1C</option>
+		<option value="">None</option>
+	</select>
+	<br>
+	<label for="checkbox2">Checkbox 2:</label>
+	<select id="checkbox2" class="checkbox" name="checkbox2">
+		<option value="2a">Option 2A</option>
+		<option value="2b">Option 2B</option>
+		<option value="2c">Option 2C</option>
+		<option value="">None</option>
+	</select>
+	<br>
+	<label for="checkbox3">Checkbox 3:</label>
+	<select id="checkbox3" class="checkbox" name="checkbox3">
+		<option value="3a">Option 3A</option>
+		<option value="3b">Option 3B</option>
+		<option value="3c">Option 3C</option>
+		<option value="">None</option>
+	</select>
+	<br>
+	<label for="checkbox4">Checkbox 4:</label>
+	<select id="checkbox4" class="checkbox" name="checkbox4">
+		<option value="4a">Option 4A</option>
+		<option value="4b">Option 4B</option>
+		<option value="4c">Option 4C</option>
+		<option value="">None</option>
+	</select>
+	<?php
+		if(isset($_POST['checkbox'])) {
+			$values = $_POST['checkbox'];
+			foreach($values as $name => $value) {
+				if(!empty($value)){
+					echo "Checkbox " . substr($name, -1) . " option " . substr($value, -1) . " is selected. ";
+				} else {
+					echo "Checkbox " . substr($name, -1) . " is not checked. ";
+				}
+			}
+			if(empty($values)){
+				echo "Please select an option.";
+			}
+		} else {
+			echo "Please select an option.";
+		}
+	?>
+</body>
+</html>
