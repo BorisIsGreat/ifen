@@ -1,14 +1,22 @@
 <html>
   <head>
-     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Reload the page after 30 seconds
+        <script>
+        function reloadPage() {
             setTimeout(function() {
                 location.reload();
-            }, 3000000); // 3000 seconds
+            }, 10000); // Reload the page after 10 seconds
+        }
 
-            // Trigger the button "tab-me" when the page loads
-            document.getElementById('tab-me').click();
+        function triggerDiv() {
+            var divs = document.getElementsByClassName('pubui-filters-item-text');
+            if (divs.length > 0) {
+                divs[0].click(); // Trigger the first div with the class 'pubui-filters-item-text'
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            reloadPage();
+            triggerDiv();
         });
     </script>
   </head>
