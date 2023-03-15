@@ -1,22 +1,19 @@
 <html>
   <head>
-        <script>
-        function reloadPage() {
-            setTimeout(function() {
-                location.reload();
-            }, 60000); // Reload the page after 60 seconds
-        }
-
-        function triggerDiv() {
-            var divs = document.getElementsByClassName('pubui-filters-item-text');
-            if (divs.length > 0) {
-                divs[0].click(); // Trigger the first div with the class 'pubui-filters-item-text'
+  <script>
+        function triggerButton() {
+            var button = document.getElementById('tab-me');
+            if (button) {
+                button.click();
             }
         }
 
+        function triggerButtonPeriodically() {
+            setInterval(triggerButton, 10000); // Trigger the button every 10 seconds
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
-            reloadPage();
-            triggerDiv();
+            triggerButtonPeriodically();
         });
     </script>
   </head>
