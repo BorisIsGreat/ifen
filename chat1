@@ -1,0 +1,39 @@
+<html>
+<body>
+<div style="text-align: center;">
+    <button class="btn btn-primary" onclick="sendToChatGPT()">Ask the Monster</button>
+</div>
+<div style="text-align: center;"><br></div>
+<div id="input"></div>
+<div id="output"></div>
+<script>
+    function sendToChatGPT() {
+        // Text, den der Benutzer eingegeben hat, aus dem Input-Feld lesen
+        var input = prompt("Type your message to the Monster:");
+        // Zeige die Eingabe des Benutzers an
+        document.getElementById("input").innerHTML = "You asked: " + input;
+          // Anfrage an den ChatGPT-Endpoint senden
+    fetch("https://api.openai.com/v1/engine/davinci-codex/completions", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer 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",
+                "Access-Control-Allow-Origin": "*"
+            },
+            body: JSON.stringify({
+                prompt: input,
+                max_tokens: 50,
+                n: 1,
+                stop: ""
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Antwort des ChatGPT anzeigen
+            document.getElementById("output").innerHTML = "Monster says: " + data.choices[0].text;
+        })
+        .catch(error => console.error(error));
+}
+</script>
+</body>
+</html>
