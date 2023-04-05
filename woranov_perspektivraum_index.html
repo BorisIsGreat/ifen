@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Pure CSS Tabs With Indicator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./woranov_style.css">
+  <style>
+   .tab-content {
+padding: 20px;
+background-color: #fff;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+border-radius: 5px;
+}
+
+.tab-title {
+color: #428BFF;
+font-size: 24px;
+margin-top: 0;
+}
+
+.tab-description {
+margin-top: 10px;
+font-size: 16px;
+line-height: 1.5;
+}
+
+.tab-note,
+.tab-technique,
+.tab-tip {
+margin-top: 20px;
+}
+
+.tab-note strong,
+.tab-technique strong,
+.tab-tip strong {
+font-weight: bold;
+}
+
+.tab-note {
+color: #666;
+font-size: 14px;
+line-height: 1.5;
+}
+
+.tab-technique,
+.tab-tip {
+font-size: 16px;
+line-height: 1.5;
+}
+
+.tab-technique strong,
+.tab-tip strong {
+color: #428BFF;
+}
+
+.tab-tip {
+color: #333;
+}
+  </style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>Ablauf des Perspektivraums</h1>
+<div class="tabs">
+  
+  <input type="radio" id="tab1" name="tab-control" checked>
+  <input type="radio" id="tab2" name="tab-control">
+  <input type="radio" id="tab3" name="tab-control">  
+  <input type="radio" id="tab4" name="tab-control">
+  <ul>
+    <li title="Einführung"><label for="tab1" role="button"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="black" stroke-width="2" fill="none"/><text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="black">1</text></svg><br><span>Einführung</span></label></li>
+    <li title="Impulsfragen"><label for="tab2" role="button"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="black" stroke-width="2" fill="none"/><text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="black">2</text></svg>
+<br><span>Impulsfragen</span></label></li>
+    <li title="Gruppendiskussion"><label for="tab3" role="button"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="black" stroke-width="2" fill="none"/><text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="black">3</text></svg>
+<br><span>Gruppendiskussion</span></label></li>   
+    <li title="Zusammenfassung"><label for="tab4" role="button"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="black" stroke-width="2" fill="none"/><text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="black">4</text></svg>
+<br><span>Zusammenfassung</span></label></li>
+  </ul>
+  
+  <div class="slider"><div class="indicator"></div></div>
+  <div class="content">
+    <section>
+      <p class="tab-description">Der Moderator stellt das Ziel des Klarraums vor und gibt den Teilnehmern die Gelegenheit, ihre Erwartungen und Bedürfnisse zu äußern.</p>
+  <p class="tab-technique"><strong>Wichtig: </strong> Die Einführung sollte kurz und prägnant sein und das Ziel des Klarraums klar vermitteln. Es ist wichtig, dass alle Teilnehmer verstehen, worum es geht und was von ihnen erwartet wird. Der Moderator sollte auch sicherstellen, dass alle Teilnehmer die Möglichkeit haben, ihre Erwartungen und Bedürfnisse zu äußern, um eine sichere Umgebung zu schaffen.</p>
+  <p class="tab-technique"><strong>Technik: </strong> "Round Robin" - der Moderator geht reihum und gibt jedem Teilnehmer die Möglichkeit, seine Erwartungen und Bedürfnisse zu äußern.</p>
+  <p class="tab-tip"><strong>Tipp: </strong> Stellen Sie sicher, dass jeder Teilnehmer die Gelegenheit hat, zu sprechen und dass alle Erwartungen und Bedürfnisse gehört werden. Bitten Sie die Teilnehmer, aktiv zuzuhören und respektvoll zu sein.</p>
+    </section>
+        <section>
+          <h2>Impulsfragen 2</h2>
+
+           <p class="tab-description">Der Moderator stellt Fragen, die dazu dienen, die Teilnehmer auf ihre Erfahrungen und Eindrücke zu konzentrieren.</p>
+           <p class="tab-technique"><strong>Wichtig: </strong> Die Impulsfragen sollten dazu dienen, die Teilnehmer auf ihre Erfahrungen und Eindrücke zu konzentrieren. Es ist wichtig, offene Fragen zu stellen, die Raum für Diskussionen und Reflexion bieten. Der Moderator sollte auch sicherstellen, dass alle Teilnehmer die Möglichkeit haben, ihre Gedanken und Gefühle zu teilen.</p>
+           <p class="tab-technique"><strong>Technik: </strong> Offene Fragen stellen, die dazu anregen, über Erfahrungen und Eindrücke zu sprechen, z.B. "Was ist Ihnen aufgefallen?" oder "Wie haben Sie sich gefühlt?"</p>
+           <p class="tab-tip"><strong>Tipp: </strong> Geben Sie den Teilnehmern ausreichend Zeit, um über ihre Erfahrungen nachzudenken und ihre Gedanken zu sammeln. Ermutigen Sie sie, offen und ehrlich zu sein.</p>
+
+    </section>
+          
+          <section>
+          <h2>Gruppendiskussion</h2>
+           <p class="tab-description">Die Teilnehmer teilen ihre Erfahrungen und Eindrücke in der Gruppe und klären Unklarheiten.</p>
+           <p class="tab-technique"><strong>Wichtig: </strong> Die Gruppendiskussion sollte eine sichere und respektvolle Umgebung bieten, in der alle Teilnehmer ihre Gedanken und Gefühle teilen können. Der Moderator sollte darauf achten, dass alle Teilnehmer die Gelegenheit haben, zu sprechen, und Unklarheiten klären. Es ist auch wichtig, dass der Moderator die Diskussion auf das Ziel des Klarraums fokussiert und sicherstellt, dass alle Teilnehmer ein gemeinsames Verständnis haben.</p>
+           <p class="tab-technique"><strong>Technik: </strong> Aktives Zuhören - die Teilnehmer wiederholen oder paraphrasieren, was ein anderer Teilnehmer gesagt hat, um sicherzustellen, dass sie ihn richtig verstanden haben.</p>
+           <p class="tab-tip"><strong>Tipp: </strong> Stellen Sie sicher, dass jeder Teilnehmer die Möglichkeit hat, seine Gedanken zu teilen und dass keine Stimmen dominiert werden. Halten Sie die Diskussion fokussiert und konstruktiv.</p>
+   </section>
+            <section>
+          <h2>Zusammenfassung</h2>
+          <p class="tab-description">Der Moderator fasst die wichtigsten Punkte der Gruppendiskussion zusammen und stellt sicher, dass alle Teilnehmer ein gemeinsames Verständnis haben.</p>
+           <p class="tab-technique"><strong>Wichtig: </strong> Die Zusammenfassung sollte die wichtigsten Punkte der Gruppendiskussion zusammenfassen und sicherstellen, dass alle Teilnehmer ein gemeinsames Verständnis haben. Der Moderator sollte auch sicherstellen, dass alle Teilnehmer die Möglichkeit haben, ihre Gedanken und Gefühle zu teilen. Es ist auch wichtig, dass der Moderator den Teilnehmern Feedback gibt und sie ermutigt, ihre Erkenntnisse und Erkenntnisse in die Tat umzusetzen.</p>
+           <p class="tab-technique"><strong>Technik: </strong> Mind Mapping - visuelle Darstellung der wichtigsten Punkte der Gruppendiskussion.</p>
+           <p class="tab-tip"><strong>Tipp: </strong> Stellen Sie sicher, dass alle Teilnehmer die Möglichkeit haben, Fragen zu stellen oder Ergänzungen zu machen, um sicherzustellen, dass alle ein gemeinsames Verständnis haben. Halten Sie die Zusammenfassung kurz und prägnant.</p>
+     </section>
+      </div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
