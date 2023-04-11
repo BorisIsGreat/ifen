@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Flickr Upload Window Example</title>
+    <!-- Include the Flickr Uploadr API JavaScript file -->
+    <script src="https://www.flickr.com/services/uploadr/launch.js"></script>
+</head>
+<body>
+    <h1>Upload a Photo to Flickr</h1>
+    <button onclick="showUploadWindow()">Upload</button>
+
+    <script>
+        // Replace YOUR_API_KEY with your Flickr API key
+        var apiKey = "YOUR_API_KEY";
+
+        // Create a Flickr Uploadr object
+        var uploadr = new FlickrUploadr(apiKey);
+
+        // Define the upload parameters
+        var params = {
+            title: "My Uploaded Photo",
+            description: "This is a photo that I uploaded using the Flickr Uploadr",
+            tags: "myphoto, flickruploadr"
+        };
+
+        // Define the function to show the upload window
+        function showUploadWindow() {
+            uploadr.showUploadWindow(params);
+        }
+    </script>
+</body>
+</html>
