@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>OneDrive Folder Link Popup Example</title>
+
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Magnific Popup JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <style>
+        /* Styles for the popup window */
+        .white-popup {
+            position: relative;
+            background: #FFF;
+            padding: 20px;
+            width: auto;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 3px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Close button styles */
+        .mfp-close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin-top: -10px;
+            margin-right: -10px;
+            width: 22px;
+            height: 22px;
+            opacity: 0.8;
+            line-height: 22px;
+            font-size: 20px;
+            font-style: normal;
+            text-align: center;
+            color: #FFF;
+            text-decoration: none;
+            text-shadow: 0 1px 0 #FFF;
+            background: #000;
+            border-radius: 13px;
+            border: 0;
+            box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.2s ease-out;
+        }
+
+        /* Hover styles for close button */
+        .mfp-close:hover,
+        .mfp-close:focus {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Link to open the OneDrive folder link in a pop-up window -->
+    <a href="https://365education-my.sharepoint.com/personal/merbo392_365_education_lu/_layouts/15/onedrive.aspx?csf=1&amp;web=1&amp;e=7SBk18&amp;cid=3bd8554b%2D43a6%2D4517%2Da701%2D4217db689242&amp;FolderCTID=0x0120007646762B137060428B9D8C8C2CAAD12F&amp;id=%2Fpersonal%2Fmerbo392%5F365%5Feducation%5Flu%2FDocuments%2FFuDo%20Upload%20Images&amp;view=0"
+       class="open-popup-link">Fotoen eroplueden</a>
+
+    <!-- Popup window content -->
+    <div id="popup-content" class="white-popup mfp-hide"></div>
+
+    <!-- JavaScript code to initialize the popup window -->
+    <script>
+       
+        $(document).ready(function() {
+            $('.open-popup-link').magnificPopup({
+                type: 'ajax',
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'mfp-fade',
+                closeMarkup: '<button title="Close (Esc)" type="button" class="mfp-close">&#215;</button>',
+                callbacks: {
+                    parseAjax: function(mfpResponse) {
+                        mfpResponse.data = $(mfpResponse.data).find('#s4-workspace');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
