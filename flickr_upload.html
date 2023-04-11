@@ -11,11 +11,12 @@
     <button onclick="showUploadWindow()">Upload</button>
 
     <script>
-        // Replace YOUR_API_KEY with your Flickr API key
-        var apiKey = "YOUR_API_KEY";
+        // Replace YOUR_API_KEY and YOUR_API_SECRET with your Flickr API key and secret key
+        var apiKey = "e68f77927da6e04da85fce660f70bd37";
+        var apiSecret = "26408a4db5047b60";
 
         // Create a Flickr Uploadr object
-        var uploadr = new FlickrUploadr(apiKey);
+        var uploadr = new FlickrUploadr(apiKey, apiSecret);
 
         // Define the upload parameters
         var params = {
