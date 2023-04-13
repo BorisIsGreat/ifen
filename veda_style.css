@@ -1,5 +1,4 @@
 /* === BASE HEADING === */ 
-
 h1 {
   position: relative;
   padding: 0;
@@ -23,10 +22,7 @@ h1 em {
   font-weight: 600;
 }
 
-
-
-/* Style 9
-   ----------------------------- */
+/* Style 9 */
 .nine h1 span {
   margin-top: 5px;
   font-size: 15px;
@@ -53,8 +49,6 @@ h1 em {
   margin: 0 20px;
 }
 
-
-
 /* ------- Helper Styles -------------*/
 *,
 *:before,
@@ -66,7 +60,7 @@ h1 em {
 body {
   background: #eee;
 }
-div {
+.full-width {
   position: relative;
   background: #f8f8f8;
   width: 100%;
