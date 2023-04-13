@@ -1,5 +1,5 @@
-/* === BASE HEADING === */ 
-h1 {
+/* === BASE HEADING === */
+.main-title {
   position: relative;
   padding: 0;
   margin: 0;
@@ -12,18 +12,18 @@ h1 {
   transition: all 0.4s ease 0s;
 }
 
-h1 span {
+.main-title span {
   display: block;
   font-size: 0.5em;
   line-height: 1.3;
 }
-h1 em {
+.main-title em {
   font-style: normal;
   font-weight: 600;
 }
 
 /* Style 9 */
-.nine h1 span {
+.nine .main-title span {
   margin-top: 5px;
   font-size: 15px;
   color: #444;
@@ -39,7 +39,7 @@ h1 em {
   justify-content: center;
 }
 
-.nine h1 span:before, .nine h1 span:after {
+.nine .main-title span:before, .nine .main-title span:after {
   content: "";
   flex-grow: 1;
   border-bottom: 1px solid #ccc;
@@ -69,7 +69,7 @@ body {
   border: 3px solid rgba(0, 0, 0, 0.08);
 }
 
-h1:before,
-h1:after {
+.main-title:before,
+.main-title:after {
   background-color: #c50000;
 }
