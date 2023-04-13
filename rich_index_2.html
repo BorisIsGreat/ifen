@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Title Example</title>
+<style>
+/* === BASE HEADING === */
+.main-title {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  color: #080808;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.main-title span {
+  display: block;
+  font-size: 0.5em;
+  line-height: 1.3;
+}
+.main-title em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Style 9 */
+.nine .main-title span {
+  margin-top: 5px;
+  font-size: 15px;
+  color: #444;
+  word-spacing: 1px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nine .main-title span:before, .nine .main-title span:after {
+  content: "";
+  flex-grow: 1;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  height: 5px;
+  background-color: #f8f8f8;
+  margin: 0 20px;
+}
+
+/* ------- Helper Styles -------------*/
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  background: #eee;
+}
+.full-width {
+  position: relative;
+  background: #f8f8f8;
+  width: 100%;
+  padding: 2em;
+  margin: 1.5em auto;
+  border: 3px solid rgba(0, 0, 0, 0.08);
+}
+
+.main-title:before,
+.main-title:after {
+  background-color: #c50000;
+}
+</style>
+</head>
+<body>
+
+<div class="full-width nine">
+  <div class="main-title">FuDo - Fuerschen dobaussen<span>Wéi geet dat? für Cycle 2-4</span></div>
+</div>
+
+</body>
+</html>
