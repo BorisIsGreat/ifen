@@ -206,7 +206,8 @@ text-align: center;
     text-transform: uppercase;
 
     display: grid;
-    grid-template-columns: 1fr max-content 1fr;
+    
+  : 1fr max-content 1fr;
     grid-template-rows: 27px 0;
     grid-gap: 20px;
     align-items: center;
@@ -255,7 +256,7 @@ text-align: center;
     text-transform: uppercase; font-family:"Raleway", sans-serif; font-weight:500;
 
     display: grid;
-    grid-template-columns: 1fr max-content 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 27px 0;
     grid-gap: 20px;
     align-items: center;
